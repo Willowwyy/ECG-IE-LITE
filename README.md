@@ -1,5 +1,6 @@
 # 🫀 ECG-IE-Lite: 基于知识蒸馏的心电报告智能结构化系统
 
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model%20Download-yellow)](https://huggingface.co/Willow-yue/Qwen2.5-ECG-7B-Finetuned)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-green)](https://www.python.org/)
 [![Model](https://img.shields.io/badge/Base%20Model-Qwen2.5--7B-violet)](https://huggingface.co/Qwen/Qwen2.5-7B)
@@ -46,6 +47,14 @@
 3.  **Fine-tuning**: 使用 Unsloth (LoRA/QLoRA) 进行参数高效微调。
 4.  **Inference**: 集成 Flash Attention 2 加速推理。
 
+## 📥 模型下载 (Model Zoo)
+
+我们已将微调后的模型权重完整上传至 Hugging Face，您可以直接下载使用或通过 Transformers 库调用。
+
+| 模型名称 (Model Name) | 基座 (Base) | 训练数据 (Data) | 链接 (Link) |
+| :--- | :--- | :--- | :--- |
+| **Qwen2.5-ECG-7B-Finetuned** | Qwen2.5-7B-Instruct | DeepSeek Distilled (1.8k) | [🤗 Hugging Face](https://huggingface.co/Willow-yue/Qwen2.5-ECG-7B-Finetuned) |
+
 ## 📂 目录结构
 
 ```text
@@ -88,17 +97,18 @@ pip install -r requirements.txt
 
 方式 A：Web 可视化界面
 启动 Streamlit 应用，在浏览器中交互式体验。
-
 ```bash
 streamlit run app.py
+```
+
 方式 B：命令行工具 (CLI)
 如果您需要批量处理或测试 API 接口：
+```bash
+# 1. 自动从 Hugging Face 加载模型推理 (推荐)
+python scripts/inference.py --model_path "Willow-yue/Qwen2.5-ECG-7B-Finetuned"
 
-# 使用默认路径推理
-python scripts/inference.py
-
-# 指定自定义模型路径
-python scripts/inference.py --model_path "/path/to/your/finetuned/model"
+# 2. 指定本地路径推理
+python scripts/inference.py --model_path "/path/to/your/local/model"
 
 ```
 
