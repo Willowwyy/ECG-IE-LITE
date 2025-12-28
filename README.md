@@ -74,7 +74,7 @@ ECG-IE-Lite/
 
 ```bash
 # 请将 YourUsername 替换为你的实际 GitHub 用户名
-git clone [https://github.com/YourUsername/ECG-IE-Lite.git](https://github.com/YourUsername/ECG-IE-Lite.git)
+git clone [https://github.com/Willowwyy/ECG-IE-LITE.git](https://github.com/Willowwyy/ECG-IE-LITE.git)
 cd ECG-IE-Lite
 pip install -r requirements.txt
 ```
