@@ -66,44 +66,43 @@ ECG-IE-Lite/
 ├── app.py                   # Streamlit Web 演示应用
 ├── requirements.txt         # 项目依赖
 └── README.md                # 项目文档
-🚀 快速开始 (Quick Start)
-1. 环境安装
+```
+## 🚀 快速开始 (Quick Start)
+
+### 1. 环境安装
 建议使用 Python 3.10+ 和 CUDA 环境。
 
-Bash
-
+```bash
 # 请将 YourUsername 替换为你的实际 GitHub 用户名
 git clone [https://github.com/YourUsername/ECG-IE-Lite.git](https://github.com/YourUsername/ECG-IE-Lite.git)
 cd ECG-IE-Lite
 pip install -r requirements.txt
-2. 数据处理与蒸馏 (可选)
+```
+### 2. 数据处理与蒸馏 (可选)
 如果您想复现数据构建过程，请按顺序运行 notebooks/ 下的文件。
 
 注：运行 02_knowledge_distillation.ipynb 需要配置 DeepSeek API Key。
 
-3. 模型推理 (Inference)
+### 3. 模型推理 (Inference)
 本项目提供了两种使用方式：
 
 方式 A：Web 可视化界面
 启动 Streamlit 应用，在浏览器中交互式体验。
 
-Bash
-
+```bash
 streamlit run app.py
 方式 B：命令行工具 (CLI)
 如果您需要批量处理或测试 API 接口：
-
-Bash
 
 # 使用默认路径推理
 python scripts/inference.py
 
 # 指定自定义模型路径
 python scripts/inference.py --model_path "/path/to/your/finetuned/model"
-📸 演示截图
-(请在此处插入一张 Streamlit 界面运行时的截图，展示输入文本 -> 输出表格的过程)
 
-🤝 致谢 & 引用
+```
+
+## 🤝 致谢 & 引用
 Dataset: PTB-XL Database
 
 Base Model: Qwen2.5 by Alibaba Cloud
