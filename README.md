@@ -61,7 +61,7 @@
 ECG-IE-Lite/
 ├── assets/                  # 存放演示图片与结果图表
 │   └── benchmark_result.png
-├── data/                    # 数据存放目录 (建议)
+├── data/                    # 数据存放目录
 │   └── processed/           # 预处理后的数据集
 ├── notebooks/               # 数据工程 Jupyter Notebooks
 │   ├── 01_data_preparation.ipynb      # 数据清洗与筛选
@@ -82,7 +82,7 @@ ECG-IE-Lite/
 建议使用 Python 3.10+ 和 CUDA 环境。
 
 ```bash
-# 请将 YourUsername 替换为你的实际 GitHub 用户名
+
 git clone [https://github.com/Willowwyy/ECG-IE-LITE.git](https://github.com/Willowwyy/ECG-IE-LITE.git)
 cd ECG-IE-Lite
 pip install -r requirements.txt
